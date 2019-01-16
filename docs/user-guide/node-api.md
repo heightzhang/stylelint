@@ -21,7 +21,7 @@ npm install stylelint
 
 选项是具有以下属性的对象。
 
-虽然 `files` 和 `code` 都是“可选的”，但你 *必须* 选择其中之一。其他所有选项都是可选的。
+虽然 `files` 和 `code` 都是“可选的”，但您 *必须* 选择其中之一。其他所有选项都是可选的。
 
 ### `code`
 
@@ -43,7 +43,7 @@ npm install stylelint
 
 绝对路径，定义 `extends` 和 `plugins` 的相对路径 *相对于* 的目录。
 
-如果传递的 `config` 对象使用相对路径，例如用于 `extends` 或 `plugins`，你必须传递 `configBasedir`。如果没有使用相对路径，则不需要这个属性。
+如果传递的 `config` 对象使用相对路径，例如用于 `extends` 或 `plugins`，您必须传递 `configBasedir`。如果没有使用相对路径，则不需要这个属性。
 
 ### `configFile`
 
@@ -55,11 +55,11 @@ npm install stylelint
 
 部分 stylelint 配置对象，其属性将覆盖现有的配置对象，无论该配置是通过 `config` 选项还是 `.stylelintrc` 文件加载的。
 
-`configOverrides` 和 `config` 选项之间的区别在于：如果传递了任何 `config` 对象，则 stylelint 不会去寻找 `.stylelintrc` 文件而只是使用你传递的 `config` 对象；但如果你想加载 `.stylelintrc` 文件 *并且* 覆盖它的特定部分，`configOverrides` 就是做这个的。
+`configOverrides` 和 `config` 选项之间的区别在于：如果传递了任何 `config` 对象，则 stylelint 不会去寻找 `.stylelintrc` 文件而只是使用您传递的 `config` 对象；但如果您想加载 `.stylelintrc` 文件 *并且* 覆盖它的特定部分，`configOverrides` 就是做这个的。
 
 ### `files`
 
-文件 glob 或文件 glob 数组。最终传递给 [globby](https://github.com/sindresorhus/globby) 来找出你想要检查的文件。
+文件 glob 或文件 glob 数组。最终传递给 [globby](https://github.com/sindresorhus/globby) 来找出您想要检查的文件。
 
 相对 glob 将被认为是 `globbyOptions.cwd` 的相对路径。
 
@@ -109,7 +109,7 @@ npm install stylelint
 
 ### `reportNeedlessDisables`
 
-如果为 `true`，`ignoreDisables` 也将被设置为 `true`，返回的数据将包含 `needlessDisables` 属性，其值是一个对象数组，每个成员对应一个源代码，告诉你哪个 stylelint 禁用注释是没有阻止违规检查的。
+如果为 `true`，`ignoreDisables` 也将被设置为 `true`，返回的数据将包含 `needlessDisables` 属性，其值是一个对象数组，每个成员对应一个源代码，告诉您哪个 stylelint 禁用注释是没有阻止违规检查的。
 
 使用此报告来清理代码库，仅保留有其服务目的的 stylelint 禁用注释。
 
@@ -166,7 +166,7 @@ npm install stylelint
 
 ## 语法错误
 
-当你的CSS包含语法错误时，`stylelint.lint()` 并不会拒绝Promise。
+当您的CSS包含语法错误时，`stylelint.lint()` 并不会拒绝Promise。
 它解析一个对象（请参阅[返回的 Promise](#返回的-promise)），其中包含有关语法错误的信息。
 
 ## 用法示例
@@ -188,7 +188,7 @@ stylelint.lint({
   });
 ```
 
-如果`myConfig` *包含* `extends` 或 `plugins` 的相对路径，你 *必须* 使用 `configBasedir`：
+如果`myConfig` *包含* `extends` 或 `plugins` 的相对路径，您 *必须* 使用 `configBasedir`：
 
 ```js
 stylelint.lint({
@@ -198,7 +198,7 @@ stylelint.lint({
 }).then(function() { .. });
 ```
 
-也许你想使用 CSS 字符串而不是文件 glob，并且你想使用字符串格式化程序而不是默认的 JSON：
+也许您想使用 CSS 字符串而不是文件 glob，并且您想使用字符串格式化程序而不是默认的 JSON：
 
 ```js
 stylelint.lint({
@@ -208,7 +208,7 @@ stylelint.lint({
 }).then(function() { .. });
 ```
 
-也许你想使用我自己的自定义格式化程序函数并解析`.scss`源文件：
+也许您想使用我自己的自定义格式化程序函数并解析`.scss`源文件：
 
 ```js
 stylelint.lint({
